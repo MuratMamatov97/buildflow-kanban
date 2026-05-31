@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# BuildFlow Kanban
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Kanban board built with React, TypeScript, Zustand, and dnd-kit.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+BuildFlow Kanban is a task planning application inspired by tools such as Trello, Jira, and Linear. The project focuses on clean architecture, type safety, drag-and-drop interactions, and state management.
 
-## React Compiler
+This project was created to demonstrate frontend engineering skills using a modern React stack.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Implemented
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Kanban board workflow
+* Drag and Drop task management
+* Task creation
+* Task deletion
+* State management with Zustand
+* Local storage persistence
+* Responsive layout
+* TypeScript-first development
+* Modular project structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Planned
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Task editing
+* Task priorities
+* Due dates
+* Search and filtering
+* Undo delete
+* Keyboard accessibility
+* Playwright E2E tests
+* GitHub Actions CI/CD
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* Zustand
+* dnd-kit
+* Tailwind CSS
+
+## Project Structure
+
+```text
+src/
+├── app/
+├── entities/
+├── widgets/
+├── shared/
+├── store/
+└── pages/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repository:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/MuratMamatov97/buildflow-kanban.git
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+## Architecture
+
+The project follows a feature-oriented structure with clear separation of concerns:
+
+* UI components
+* Domain entities
+* State management
+* Shared utilities
+
+The goal is to keep the codebase scalable and maintainable as new features are added.
+
+## Current Status
+
+Work in progress.
+
+The project is actively being expanded with additional task management and planning features.
